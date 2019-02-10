@@ -1,9 +1,8 @@
 #middlecontent {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 .article-content .highlight-box {
   position: relative;
-  opacity: 0.7;
   overflow: hidden;
   border-radius: 4px;
   margin: 1.6em 0;
