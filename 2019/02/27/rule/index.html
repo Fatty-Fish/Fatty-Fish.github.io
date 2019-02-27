@@ -5,7 +5,7 @@
   
 
   
-  <title>@media | 学习博客</title>
+  <title>@rule | 学习博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -13,14 +13,14 @@
   <meta name="description" content="媒体查询 @media出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。 语法应用到样式表中：12345678&amp;lt;style&amp;">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="@media">
+<meta property="og:title" content="@rule">
 <meta property="og:url" content="http://fishqj.com/2019/02/27/rule/index.html">
 <meta property="og:site_name" content="学习博客">
 <meta property="og:description" content="媒体查询 @media出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。 语法应用到样式表中：12345678&amp;lt;style&amp;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-27T03:38:40.593Z">
+<meta property="og:updated_time" content="2019-02-27T06:42:15.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="@media">
+<meta name="twitter:title" content="@rule">
 <meta name="twitter:description" content="媒体查询 @media出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。 语法应用到样式表中：12345678&amp;lt;style&amp;">
   
     <link rel="alternate" href="/atom.xml" title="学习博客" type="application/atom+xml">
@@ -60,7 +60,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      @media
+      @rule
     </h1>
   
 
@@ -91,6 +91,10 @@
 <h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><h3 id="not"><a href="#not" class="headerlink" title="not"></a>not</h3><p>应用于当前的媒体查询，不会影响其他的媒体查询，会把当前媒体查询的所有查询否定。<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@meida not (max-width: 700px) and (orientation: landscape), print and (color) &#123;</span><br><span class="line"></span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br><span class="line">//等价于</span><br><span class="line"></span><br><span class="line">@meida not ((max-width: 700px) and (orientation: landscape)), print and (color) &#123;</span><br><span class="line"></span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
 <h3 id="and"><a href="#and" class="headerlink" title="and"></a>and</h3><p>合并多个媒体属性或合并媒体属性和媒体类型<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media tv and (min-width: 700px) and (orientation: landscape) &#123;</span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
 <h3 id="only"><a href="#only" class="headerlink" title="only"></a>only</h3><p>防止不支持媒体查询属性的老旧浏览器应用到样式，原理是媒体属性使用场景是css3新增的，一些老旧浏览器只支持css2有的@media screen{}，所以当@media only screen…时，老旧浏览器会解析为“media=only”，并没有only的设备，所以不会应用后面的样式。</p>
+<h1 id="import-从其他样式表导入样式规则"><a href="#import-从其他样式表导入样式规则" class="headerlink" title="@import 从其他样式表导入样式规则"></a>@import 从其他样式表导入样式规则</h1><p> @import url media query<br> 必须先于所有其他规则<br> <strong>tips</strong><br> 想起之前有一个import语法报错：<br> Import in body of module; reorder to top  import/first<br>原因：<br> import 必须在其它所有业务代码前面（eslint 暴出）</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;./example.css&quot;;</span><br><span class="line">@import url(&quot;chrome://communicator/skin/&quot;) screen and (color);</span><br></pre></td></tr></table></figure></div>
+<h1 id="keyframes-关键帧"><a href="#keyframes-关键帧" class="headerlink" title="@keyframes 关键帧"></a>@keyframes 关键帧</h1><p>用于animation创建动画效果。每个@keyframes规则包含很多关键帧，用百分比命名或者关键字“from”（代表0%），“to”（100%）命名。<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">div.animate &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    animation: 2s move linear 1s infinite alternate; // 动画将延迟1s后，匀速无限次2s往返运动（从左往右再回来）</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        width: 600px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<p>如果0%关键帧的样式和元素css原本的冲突了，会以0%的为准，正常的被覆盖，而不是突变。</p>
 
       
     </div>
@@ -193,7 +197,7 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/02/27/rule/">@media</a>
+            <a href="/2019/02/27/rule/">@rule</a>
           </li>
         
           <li>
