@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>总结 | 学习博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="symbol()是和boolean，string一样的基本数据类型（原始数据），每个symbol都是独一无二的，es6出现symbol的仅有目的是做属性标识符。symbol对象有原型，但原型上没有constructor，所以不能new Symbol()，使用时只能Symbol（“字符串用于描述区别”）。但之前出现的比如string对象，就有constructor，能通过new String（）来得">
+<meta name="keywords" content="note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="总结">
+<meta property="og:url" content="http://fishqj.com/2019/03/05/总结/index.html">
+<meta property="og:site_name" content="学习博客">
+<meta property="og:description" content="symbol()是和boolean，string一样的基本数据类型（原始数据），每个symbol都是独一无二的，es6出现symbol的仅有目的是做属性标识符。symbol对象有原型，但原型上没有constructor，所以不能new Symbol()，使用时只能Symbol（“字符串用于描述区别”）。但之前出现的比如string对象，就有constructor，能通过new String（）来得">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-05T15:44:14.408Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="总结">
+<meta name="twitter:description" content="symbol()是和boolean，string一样的基本数据类型（原始数据），每个symbol都是独一无二的，es6出现symbol的仅有目的是做属性标识符。symbol对象有原型，但原型上没有constructor，所以不能new Symbol()，使用时只能Symbol（“字符串用于描述区别”）。但之前出现的比如string对象，就有constructor，能通过new String（）来得">
+  
+    <link rel="alternate" href="/atom.xml" title="学习博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="权静的博客背景">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-left">
+      
+        <a class="nav-item" href="/" title="">首页</a>
+      
+        <a class="nav-item" href="/archives" title="">归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-left">
+        <section id="main"><article id="post-总结" class="article global-container article-type-post" itemscope="" itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      总结
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/03/05/总结/" class="article-date">
+  <time datetime="2019-03-05T15:40:59.000Z" itemprop="datePublished">2019-03-05</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/">note</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="symbol"><a href="#symbol" class="headerlink" title="symbol()"></a>symbol()</h1><p>是和boolean，string一样的基本数据类型（原始数据），每个symbol都是独一无二的，es6出现symbol的仅有目的是做属性标识符。symbol对象有原型，但原型上没有constructor，所以不能new Symbol()，使用时只能Symbol（“字符串用于描述区别”）。但之前出现的比如string对象，就有constructor，能通过new String（）来得到string，这种叫显示类型转换，在es6以后出现的都会禁止。</p>
+<p>#set和map数据结构：<br> <a href="http://es6.ruanyifeng.com/#docs/set-map（阮一峰先生）" target="_blank" rel="noopener">http://es6.ruanyifeng.com/#docs/set-map（阮一峰先生）</a></p>
+<p>#@rule<br>@width这种是在less里用的：<br>先定义：class名为border的元素的border样式接受三个参数@width @style @color<br>.border(@width; @style; @color) {<br>    border: @width @style @color;<br>}<br>然后当真的定义样式时，不用：<br>.myheader{<br>.border {<br>border: 2px dashed green;<br>}<br>}<br>只需要：<br>.myheader {<br>    .border(2px; dashed; green);<br>}<br>我只知道@media\import\keyframes：<br>（火狐开发者文档 or 叫做 MDN ）<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@import" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/@import</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes</a><br>div {<br>animation: 动画时间 动画名称move 动画过渡速率linear匀速 动画延迟时间 动画重复次数infinite无限次 动画方向alternative从左往右再从右往左来回循环 停留在那个关键帧forwards停留在比如100%处时的样子；这里我当时说的是transition哈哈哈哈</p>
+<p>#数组方法<br>sort默认排序把元素转为字符串，再比较它们的UTF-16代码单元值的序列。array.sort().reverse()和array.reverse().sort()都是会按顺序执行的，不会有误差。</p>
+<p>#:root伪类就直接用：<br>：root{<br>background:green<br>}<br>代表根元素html或者xml等，是通用的<br>不像：checked这种需要指定input<br>}</p>
+<p>#布局<br>火狐参考： <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout</a><br>博客参考：<a href="http://www.cnblogs.com/yanayana/p/7066948.html" target="_blank" rel="noopener">http://www.cnblogs.com/yanayana/p/7066948.html</a></p>
+<p>#事件<br>csdn： <a href="https://blog.csdn.net/csdn_yudong/article/details/70156293" target="_blank" rel="noopener">https://blog.csdn.net/csdn_yudong/article/details/70156293</a></p>
+<p>掘金：事件委托绑定监听  <a href="https://juejin.im/entry/57ea329e67f3560057ad41a6" target="_blank" rel="noopener">https://juejin.im/entry/57ea329e67f3560057ad41a6</a><br>事件委托目前应该只有冒泡一种方式。</p>
+<p>#宏任务微任务，浏览器node不同：<br>segmentfault: <a href="https://segmentfault.com/a/1190000013660033" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013660033</a><br>事件循环，工作线程池：掘金： <a href="https://juejin.im/post/5ac0cc38f265da238440b9ec" target="_blank" rel="noopener">https://juejin.im/post/5ac0cc38f265da238440b9ec</a></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/02/27/http储存/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">http储存</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: 'Tue Mar 05 2019 23:40:59 GMT+0800'
+  owner: 'Fatty-Fish',
+  repo: 'https://github.com/Fatty-Fish/Fatty-Fish.github.io',
+  oauth: {
+    client_id: '9212f6d1d21f20c3e114',
+    client_secret: '8f2458e04b187ee915b26fbda3d26d917f271f35',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="权静的大头">
+    <h3 class="avatar-name">
+      
+        权静
+      
+    </h3>
+    <p class="avatar-slogan">
+      qjing919@gmail.com
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/note/" style="font-size: 10px;">note</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/05/总结/">总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/27/http储存/">http储存</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/27/rule/">@rule</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 权静 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
