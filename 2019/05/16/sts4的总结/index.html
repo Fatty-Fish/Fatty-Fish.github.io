@@ -5,23 +5,23 @@
   
 
   
-  <title>http缓存 | 学习博客</title>
+  <title>spring tool suite4的总结 | 学习博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta name="description" content="分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据； 强缓存expires和catch-control expires是服务器生成的时间，会不准确； catch-control有很多值，比如no-store:">
-<meta name="keywords" content="note">
+  <meta name="description" content="eclipse：IBM贡献的，Java语言开发的，最初主要是Java集成开发环境（IDE），开源免费，插件灵活，Java开发工具（java development kit, JDK插件 ），其他计算机编程语言也能很好的支持 spring tool suite：基于eclipse针对spring的开发环境，git maven ####区别eclipse、spring界面不同，操作一样 ####使用">
+<meta name="keywords" content="总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="http缓存">
-<meta property="og:url" content="http://fishqj.com/2019/02/27/http储存/index.html">
+<meta property="og:title" content="spring tool suite4的总结">
+<meta property="og:url" content="http://fishqj.com/2019/05/16/sts4的总结/index.html">
 <meta property="og:site_name" content="学习博客">
-<meta property="og:description" content="分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据； 强缓存expires和catch-control expires是服务器生成的时间，会不准确； catch-control有很多值，比如no-store:">
+<meta property="og:description" content="eclipse：IBM贡献的，Java语言开发的，最初主要是Java集成开发环境（IDE），开源免费，插件灵活，Java开发工具（java development kit, JDK插件 ），其他计算机编程语言也能很好的支持 spring tool suite：基于eclipse针对spring的开发环境，git maven ####区别eclipse、spring界面不同，操作一样 ####使用">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-16T07:20:41.745Z">
+<meta property="og:updated_time" content="2019-05-16T08:30:37.254Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="http缓存">
-<meta name="twitter:description" content="分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据； 强缓存expires和catch-control expires是服务器生成的时间，会不准确； catch-control有很多值，比如no-store:">
+<meta name="twitter:title" content="spring tool suite4的总结">
+<meta name="twitter:description" content="eclipse：IBM贡献的，Java语言开发的，最初主要是Java集成开发环境（IDE），开源免费，插件灵活，Java开发工具（java development kit, JDK插件 ），其他计算机编程语言也能很好的支持 spring tool suite：基于eclipse针对spring的开发环境，git maven ####区别eclipse、spring界面不同，操作一样 ####使用">
   
     <link rel="alternate" href="/atom.xml" title="学习博客" type="application/atom+xml">
   
@@ -54,25 +54,25 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-left">
-        <section id="main"><article id="post-http储存" class="article global-container article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-sts4的总结" class="article global-container article-type-post" itemscope="" itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      http缓存
+      spring tool suite4的总结
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/02/27/http储存/" class="article-date">
-  <time datetime="2019-02-27T07:20:04.000Z" itemprop="datePublished">2019-02-27</time>
+    <a href="/2019/05/16/sts4的总结/" class="article-date">
+  <time datetime="2019-05-16T08:22:09.000Z" itemprop="datePublished">2019-05-16</time>
 </a>
     
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/">note</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
 
   </div>
   
@@ -85,11 +85,24 @@
     
     <div class="article-content article-content-doorframe" itemprop="articleBody">
       
-        <p>分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据；</p>
-<h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><h5 id="expires和catch-control"><a href="#expires和catch-control" class="headerlink" title="expires和catch-control"></a>expires和catch-control</h5><ol>
-<li>expires是服务器生成的时间，会不准确；</li>
-<li>catch-control有很多值，比如no-store:禁止缓存；no-catch禁止在与服务器进行新鲜度再验证之前，采用缓存内容；max-age=100：缓存多久，相对时间；<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><h5 id="last-modified-if-modified-since"><a href="#last-modified-if-modified-since" class="headerlink" title="last-modified/if-modified-since"></a>last-modified/if-modified-since</h5>最后修改的日期；服务器生成last-modified，放入响应头中，浏览器拿到数据。存入缓存，并记下日期，浏览器再次有该请求时，会先看是否有last-modified字段，会在请求头中加上if-modified-since=上次服务器给的last-modified时间，发送给服务器，服务器校验是否过期，如果这个时间&lt;服务器中最后一次被定义地时间，则过期，服务器会返回200状态码，并返回最新的数据和生成最新的last-modified；如果没有过期，返回304状态码，浏览器从自己的缓存获取数据；<h5 id="etag-if-none-match"><a href="#etag-if-none-match" class="headerlink" title="etag/if-none-match"></a>etag/if-none-match</h5>服务器生成etag，是一个根据数据内容生成的特殊标识，和last-modified一样。浏览器再次有同样的请求时，会先看看是否有etag，如果有，携带if-none-match=上次服务器给的etag标识的请求头，发送给服务器验证，所请求的数据是否标识改变，服务器判断，如果改变，返回200状态码，新数据和新的etag，如果没有更改，返回304状态码，浏览器从自己的缓存中获取数据。<h5 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h5>expires是服务器生成的日期，可能不准确，在http1.1版本新增了catch-control，优先级更高。<br>last-modified是秒级的时间，而有些数据内容可能更新时间小于秒，这会导致不能获取最新数据；有些数据是周期性生成，但内容并没有改变，时间检测更新会浪费资源；etag是服务器根据数据内容生成的唯一标识，可以解决；etag是http1.1版本新增，优先级更高；</li>
+        <h3 id="eclipse："><a href="#eclipse：" class="headerlink" title="eclipse："></a>eclipse：</h3><p>IBM贡献的，Java语言开发的，最初主要是Java集成开发环境（IDE），开源免费，插件灵活，Java开发工具（java development kit, JDK插件 ），其他计算机编程语言也能很好的支持</p>
+<h4 id="spring-tool-suite："><a href="#spring-tool-suite：" class="headerlink" title="spring tool suite："></a>spring tool suite：</h4><p>基于eclipse针对spring的开发环境，git maven</p>
+<p>####区别<br>eclipse、spring界面不同，操作一样</p>
+<p>####使用</p>
+<ol>
+<li>右键import folder from existing projects，选择文件，配置好属性配置文件，一般只需要我们改一下数据库名密码为自己的<br>application.properties（系统默认）或者application.yml文件是属性配置文件，可以设置多环境配置，写多个application-dev.properties/application-pro.properties/application-test.properties,需要操作哪个环境，直接命令行启动时，修改主文件application.properties的spring.profiles.active=dev就可以：<a href="https://www.kancloud.cn/cxr17618/springboot/435772" target="_blank" rel="noopener">看云</a>  <a href="http://blog.didispace.com/springbootproperties/" target="_blank" rel="noopener">http://blog.didispace.com/springbootproperties/</a></li>
+<li>找到带有main方法的类的Java文件，main方法里会有一个springApplication.run函数，运行这个类:<h5 id="运行spring-boot-的方式："><a href="#运行spring-boot-的方式：" class="headerlink" title="运行spring boot 的方式："></a>运行spring boot 的方式：</h5></li>
+<li>运行带有main方法的类</li>
+<li>安装maven后，项目打包成jar，运行命令<br>cd 到项目根目录<br>mvn install安装maven<br>cd target<br>java -jar emample.jar –server.port=8081<br>如果pom文件有spring-boot-maven-plugin语句，可以使用命令行运行，mvn springboot:run<br>#####–<br>代表设置参数，会覆盖掉application.properties里的设置，可以以此来改变不同端口，而不同端口是不同的运行环境：Dev，Pro，test<br>#####项目根目录下：<br>pom.xml文件：配置项目依赖，类似package.json文件<br>#####comd+shift+g:<br>全局查找：~/.m2下，settings.xml文件，是maven的配置文件<br>maven build, maven install, maven clean<br>#####pom.xml文件：</li>
+<li>groupId:<br>整个大项目的名称，com.quanjing.haha:域 + 公司名 + 整个项目名</li>
+<li>artifactId:<br>具体项目的名称： haha-tolink</li>
+<li>version: 版本</li>
+<li>packaging：<br>规定项目输出格式，一般Java项目：jar，Android项目apk<h5 id="java-version-“1-8-0-201”和jdk8："><a href="#java-version-“1-8-0-201”和jdk8：" class="headerlink" title="java version “1.8.0_201”和jdk8："></a>java version “1.8.0_201”和jdk8：</h5></li>
 </ol>
+<p>java version “1.8.0_201”是完整的版本字符串</p>
+<p>jdk8或者Java™ SE Development Kit 8, Update 201 (也简写JDK 8u201)是family version，家族昵称</p>
+<p>都是指同一个Java版本</p>
+<p>现在普遍是jdk8</p>
 
       
     </div>
@@ -104,20 +117,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/03/05/总结/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            总结
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/02/27/rule/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">@rule</div>
+      <a href="/2019/05/14/mysql使用总结/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">mysql使用总结</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
@@ -130,7 +134,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Wed Feb 27 2019 15:20:04 GMT+0800'
+  id: 'Thu May 16 2019 16:22:09 GMT+0800'
   owner: 'Fatty-Fish',
   repo: 'https://github.com/Fatty-Fish/Fatty-Fish.github.io',
   oauth: {
