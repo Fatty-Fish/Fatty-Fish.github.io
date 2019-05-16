@@ -135,7 +135,7 @@ code {
 .post::after {
   content: '';
   display: block;
-  background: url("https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button.svg") no-repeat -46px top/132px 35px;
+  background: rgba(10,10,10,0.6);
   width: 88px;
   height: 35px;
   position: absolute;
@@ -314,6 +314,7 @@ body {
   background: #fff;
   margin: 3em auto;
   overflow: hidden;
+  background: #d9d3ec;
 }
 .container .main {
   width: 70%;
