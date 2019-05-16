@@ -135,7 +135,6 @@ code {
 .post::after {
   content: '';
   display: block;
-  background: rgba(10,10,10,0.6);
   width: 88px;
   height: 35px;
   position: absolute;
