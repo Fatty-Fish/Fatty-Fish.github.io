@@ -1,267 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
 
-  
-  <title>@rule | 学习博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  <meta name="description" content="媒体查询 @media出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。 语法应用到样式表中：12345678&amp;lt;style&amp;">
-<meta name="keywords" content="css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="@rule">
-<meta property="og:url" content="http://fishqj.com/2019/02/27/rule/index.html">
-<meta property="og:site_name" content="学习博客">
-<meta property="og:description" content="媒体查询 @media出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。 语法应用到样式表中：12345678&amp;lt;style&amp;">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-27T06:44:09.461Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="@rule">
-<meta name="twitter:description" content="媒体查询 @media出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。 语法应用到样式表中：12345678&amp;lt;style&amp;">
-  
-    <link rel="alternate" href="/atom.xml" title="学习博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/default-avatar.jpeg">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
 </head>
-</html>
-<body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="权静的博客背景">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-left">
-      
-        <a class="nav-item" href="/" title="">首页</a>
-      
-        <a class="nav-item" href="/archives" title="">归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-left">
-        <section id="main"><article id="post-rule" class="article global-container article-type-post" itemscope="" itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      @rule
+
+    <body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
     </h1>
-  
+    <h2 class="desc">
+        前端学习
+    </h2>
 
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/02/27/rule/" class="article-date">
-  <time datetime="2019-02-27T02:24:44.000Z" itemprop="datePublished">2019-02-27</time>
-</a>
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/FrontendSophie">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.linkedin.com/in/frontendsophie/">
+                        LinkedIn
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
     
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
-
-  <div class="article-inner">
     
-    <div class="article-content article-content-doorframe" itemprop="articleBody">
-      
+    <h2 class="post-title">
+        @rule
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-02-27
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
         <h1 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h1><p>出自CSS3，让内容的呈现根据设备不同，在一定范围内，应用不同的样式，而不用改变内容本身。一个媒体查询有一个可选的设备类型（screen、print、默认为all）和0到多个设备特性比如横屏，min-width等组成。如果媒体查询中指定的媒体类型与文档展示的设备匹配，并且所有的表达式返回为true，则会应用后面的样式。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="应用到样式表中："><a href="#应用到样式表中：" class="headerlink" title="应用到样式表中："></a>应用到样式表中：</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    @media screen and (min-width : 700px) and (orientation: landscape) &#123;</span><br><span class="line">        //样式</span><br><span class="line">    &#125;</span><br><span class="line">    @media (max-width: 100px) &#123;</span><br><span class="line">        //样式</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
-<h3 id="link元素中的media属性"><a href="#link元素中的media属性" class="headerlink" title="link元素中的media属性"></a>link元素中的media属性</h3><p>当满足link中的媒体查询，文档<strong><em>  应用   </em></strong> example.css样式，但不论是否满足，都会下载example.css。<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel = &quot;stylesheet&quot; media = &quot;screen and (min-width: 700px)&quot; href = &quot;example.css&quot;&gt;</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><h3 id="not"><a href="#not" class="headerlink" title="not"></a>not</h3><p>应用于当前的媒体查询，不会影响其他的媒体查询，会把当前媒体查询的所有查询否定。<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@meida not (max-width: 700px) and (orientation: landscape), print and (color) &#123;</span><br><span class="line"></span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br><span class="line">//等价于</span><br><span class="line"></span><br><span class="line">@meida not ((max-width: 700px) and (orientation: landscape)), print and (color) &#123;</span><br><span class="line"></span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
-<h3 id="and"><a href="#and" class="headerlink" title="and"></a>and</h3><p>合并多个媒体属性或合并媒体属性和媒体类型<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media tv and (min-width: 700px) and (orientation: landscape) &#123;</span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="应用到样式表中："><a href="#应用到样式表中：" class="headerlink" title="应用到样式表中："></a>应用到样式表中：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    @media screen and (min-width : 700px) and (orientation: landscape) &#123;</span><br><span class="line">        //样式</span><br><span class="line">    &#125;</span><br><span class="line">    @media (max-width: 100px) &#123;</span><br><span class="line">        //样式</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="link元素中的media属性"><a href="#link元素中的media属性" class="headerlink" title="link元素中的media属性"></a>link元素中的media属性</h3><p>当满足link中的媒体查询，文档<strong><em>  应用   </em></strong> example.css样式，但不论是否满足，都会下载example.css。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel = &quot;stylesheet&quot; media = &quot;screen and (min-width: 700px)&quot; href = &quot;example.css&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><h3 id="not"><a href="#not" class="headerlink" title="not"></a>not</h3><p>应用于当前的媒体查询，不会影响其他的媒体查询，会把当前媒体查询的所有查询否定。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@meida not (max-width: 700px) and (orientation: landscape), print and (color) &#123;</span><br><span class="line"></span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br><span class="line">//等价于</span><br><span class="line"></span><br><span class="line">@meida not ((max-width: 700px) and (orientation: landscape)), print and (color) &#123;</span><br><span class="line"></span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="and"><a href="#and" class="headerlink" title="and"></a>and</h3><p>合并多个媒体属性或合并媒体属性和媒体类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media tv and (min-width: 700px) and (orientation: landscape) &#123;</span><br><span class="line">    //样式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="only"><a href="#only" class="headerlink" title="only"></a>only</h3><p>防止不支持媒体查询属性的老旧浏览器应用到样式，原理是媒体属性使用场景是css3新增的，一些老旧浏览器只支持css2有的@media screen{}，所以当@media only screen…时，老旧浏览器会解析为“media=only”，并没有only的设备，所以不会应用后面的样式。</p>
 <h1 id="import-从其他样式表导入样式规则"><a href="#import-从其他样式表导入样式规则" class="headerlink" title="@import 从其他样式表导入样式规则"></a>@import 从其他样式表导入样式规则</h1><p> @import url media query<br> 必须先于所有其他规则<br> <strong>tips</strong><br> 想起之前有一个import语法报错：<br> Import in body of module; reorder to top  import/first<br>原因：<br> import 必须在其它所有业务代码前面（eslint 暴出）</p>
-<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;./example.css&quot;;</span><br><span class="line">@import url(&quot;chrome://communicator/skin/&quot;) screen and (color);</span><br></pre></td></tr></table></figure></div>
-<h1 id="keyframes-关键帧"><a href="#keyframes-关键帧" class="headerlink" title="@keyframes 关键帧"></a>@keyframes 关键帧</h1><p>用于animation创建动画效果。每个@keyframes规则包含很多关键帧，用百分比命名或者关键字“from”（代表0%），“to”（100%）命名。<br><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">div.animate &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    animation: 2s move linear 1s infinite alternate; // 动画将延迟1s后，匀速无限次2s往返运动（从左往右再回来）</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        width: 600px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;./example.css&quot;;</span><br><span class="line">@import url(&quot;chrome://communicator/skin/&quot;) screen and (color);</span><br></pre></td></tr></table></figure>
+<h1 id="keyframes-关键帧"><a href="#keyframes-关键帧" class="headerlink" title="@keyframes 关键帧"></a>@keyframes 关键帧</h1><p>用于animation创建动画效果。每个@keyframes规则包含很多关键帧，用百分比命名或者关键字“from”（代表0%），“to”（100%）命名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">div.animate &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    animation: 2s move linear 1s infinite alternate; // 动画将延迟1s后，匀速无限次2s往返运动（从左往右再回来）</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        width: 600px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>如果0%关键帧的样式和元素css原本的冲突了，会以0%的为准，正常的被覆盖，而不是突变。</p>
 
-      
     </div>
-    
-      <footer class="article-footer">
-        完
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/02/27/http储存/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            http缓存
-          
-        </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/02/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">Hello World</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
-
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: 'Wed Feb 27 2019 10:24:44 GMT+0800'
-  owner: 'Fatty-Fish',
-  repo: 'https://github.com/Fatty-Fish/Fatty-Fish.github.io',
-  oauth: {
-    client_id: '9212f6d1d21f20c3e114',
-    client_secret: '8f2458e04b187ee915b26fbda3d26d917f271f35',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
-
-  
-  
 </article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.jpeg" title="权静的大头">
-    <h3 class="avatar-name">
-      
-        权静
-      
-    </h3>
-    <p class="avatar-slogan">
-      qjing919@gmail.com
-    </p>
-  </div>
-</div>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
 
-
-  
     
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">2</span></li></ul>
-    </div>
-  </div>
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
 
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/note/" style="font-size: 20px;">note</a> <a href="/tags/总结/" style="font-size: 20px;">总结</a>
-    </div>
-  </div>
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/05/16/sts4的总结/">spring tool suite4的总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/14/mysql使用总结/">mysql使用总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/05/总结/">总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/27/http储存/">http缓存</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/27/rule/">@rule</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+                    </section>
+                </aside>
+        </div>
+    </body>
 
-  
-</aside>
-      </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2019 权静 &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
-  </div>
-</footer>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
-</body>
 </html>

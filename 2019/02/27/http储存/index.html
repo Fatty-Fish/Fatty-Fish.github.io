@@ -1,262 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
 
-  
-  <title>http缓存 | 学习博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  <meta name="description" content="分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据； 强缓存expires和catch-control expires是服务器生成的时间，会不准确； catch-control有很多值，比如no-store:">
-<meta name="keywords" content="note">
-<meta property="og:type" content="article">
-<meta property="og:title" content="http缓存">
-<meta property="og:url" content="http://fishqj.com/2019/02/27/http储存/index.html">
-<meta property="og:site_name" content="学习博客">
-<meta property="og:description" content="分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据； 强缓存expires和catch-control expires是服务器生成的时间，会不准确； catch-control有很多值，比如no-store:">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-16T07:20:41.745Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="http缓存">
-<meta name="twitter:description" content="分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据； 强缓存expires和catch-control expires是服务器生成的时间，会不准确； catch-control有很多值，比如no-store:">
-  
-    <link rel="alternate" href="/atom.xml" title="学习博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/default-avatar.jpeg">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
 </head>
-</html>
-<body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="权静的博客背景">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-left">
-      
-        <a class="nav-item" href="/" title="">首页</a>
-      
-        <a class="nav-item" href="/archives" title="">归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-left">
-        <section id="main"><article id="post-http储存" class="article global-container article-type-post" itemscope="" itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      http缓存
+
+    <body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
     </h1>
-  
+    <h2 class="desc">
+        前端学习
+    </h2>
 
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/02/27/http储存/" class="article-date">
-  <time datetime="2019-02-27T07:20:04.000Z" itemprop="datePublished">2019-02-27</time>
-</a>
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/FrontendSophie">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.linkedin.com/in/frontendsophie/">
+                        LinkedIn
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
     
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/">note</a></li></ul>
-
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
-
-  <div class="article-inner">
     
-    <div class="article-content article-content-doorframe" itemprop="articleBody">
-      
+    <h2 class="post-title">
+        http缓存
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-02-27
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
         <p>分为强缓存和协商缓存；如果命中强缓存不会向服务器发送请求，如果没有命中强缓存，再发送请求头，看是否命中协商缓存，命中服务器返回304，浏览器在自己缓存中获取，如果没有命中协商缓存（缓存过期了），服务器会返回200，并返回新的过期时间和请求数据；</p>
 <h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><h5 id="expires和catch-control"><a href="#expires和catch-control" class="headerlink" title="expires和catch-control"></a>expires和catch-control</h5><ol>
 <li>expires是服务器生成的时间，会不准确；</li>
 <li>catch-control有很多值，比如no-store:禁止缓存；no-catch禁止在与服务器进行新鲜度再验证之前，采用缓存内容；max-age=100：缓存多久，相对时间；<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><h5 id="last-modified-if-modified-since"><a href="#last-modified-if-modified-since" class="headerlink" title="last-modified/if-modified-since"></a>last-modified/if-modified-since</h5>最后修改的日期；服务器生成last-modified，放入响应头中，浏览器拿到数据。存入缓存，并记下日期，浏览器再次有该请求时，会先看是否有last-modified字段，会在请求头中加上if-modified-since=上次服务器给的last-modified时间，发送给服务器，服务器校验是否过期，如果这个时间&lt;服务器中最后一次被定义地时间，则过期，服务器会返回200状态码，并返回最新的数据和生成最新的last-modified；如果没有过期，返回304状态码，浏览器从自己的缓存获取数据；<h5 id="etag-if-none-match"><a href="#etag-if-none-match" class="headerlink" title="etag/if-none-match"></a>etag/if-none-match</h5>服务器生成etag，是一个根据数据内容生成的特殊标识，和last-modified一样。浏览器再次有同样的请求时，会先看看是否有etag，如果有，携带if-none-match=上次服务器给的etag标识的请求头，发送给服务器验证，所请求的数据是否标识改变，服务器判断，如果改变，返回200状态码，新数据和新的etag，如果没有更改，返回304状态码，浏览器从自己的缓存中获取数据。<h5 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h5>expires是服务器生成的日期，可能不准确，在http1.1版本新增了catch-control，优先级更高。<br>last-modified是秒级的时间，而有些数据内容可能更新时间小于秒，这会导致不能获取最新数据；有些数据是周期性生成，但内容并没有改变，时间检测更新会浪费资源；etag是服务器根据数据内容生成的唯一标识，可以解决；etag是http1.1版本新增，优先级更高；</li>
 </ol>
 
-      
     </div>
-    
-      <footer class="article-footer">
-        完
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/03/05/总结/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            总结
-          
-        </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/02/27/rule/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">@rule</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
-
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: 'Wed Feb 27 2019 15:20:04 GMT+0800'
-  owner: 'Fatty-Fish',
-  repo: 'https://github.com/Fatty-Fish/Fatty-Fish.github.io',
-  oauth: {
-    client_id: '9212f6d1d21f20c3e114',
-    client_secret: '8f2458e04b187ee915b26fbda3d26d917f271f35',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
-
-  
-  
 </article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.jpeg" title="权静的大头">
-    <h3 class="avatar-name">
-      
-        权静
-      
-    </h3>
-    <p class="avatar-slogan">
-      qjing919@gmail.com
-    </p>
-  </div>
-</div>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
 
-
-  
     
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">2</span></li></ul>
-    </div>
-  </div>
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
 
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/note/" style="font-size: 20px;">note</a> <a href="/tags/总结/" style="font-size: 20px;">总结</a>
-    </div>
-  </div>
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/05/16/sts4的总结/">spring tool suite4的总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/14/mysql使用总结/">mysql使用总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/05/总结/">总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/27/http储存/">http缓存</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/27/rule/">@rule</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+                    </section>
+                </aside>
+        </div>
+    </body>
 
-  
-</aside>
-      </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2019 权静 &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
-  </div>
-</footer>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
-</body>
 </html>
