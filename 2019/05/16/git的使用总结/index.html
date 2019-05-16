@@ -82,17 +82,15 @@
         </li>
     </ul>
     <div class="post-content">
-        <p>###git运用：</p>
-<p>####git stash:<br>本地作了修改，但是想回到修改之前的操作，又不想毁掉现在的修改，可以先储藏一下git stash ,恢复储藏的内容用git stash apply (可以添加指定恢复到哪一个储藏版本)<br>git pull 之后再 git push</p>
-<p>####git reset</p>
-<ol>
+        <h3 id="git运用："><a href="#git运用：" class="headerlink" title="git运用："></a>git运用：</h3><h4 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash:"></a>git stash:</h4><p>本地作了修改，但是想回到修改之前的操作，又不想毁掉现在的修改，可以先储藏一下git stash ,恢复储藏的内容用git stash apply (可以添加指定恢复到哪一个储藏版本)<br>git pull 之后再 git push</p>
+<h4 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h4><ol>
 <li>–soft 版本号：修改还存在，处于版本号状态，修改未提交</li>
 <li>–mixed 版本号：修改还存在，处于版本号状态，修改未被跟踪，爆红状态</li>
-<li>–hard 版本号：修改丢失，处于版本号状态<br>####ls<br>本地仓库.git文件夹下，ls查看文件夹下目录：<br>COMMIT_EDITMSG ORIG_HEAD hooks  logs  refs</li>
+<li>–hard 版本号：修改丢失，处于版本号状态<h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4>本地仓库.git文件夹下，ls查看文件夹下目录：<br>COMMIT_EDITMSG ORIG_HEAD hooks  logs  refs</li>
 </ol>
 <p>FETCH_HEAD branches index  objects</p>
 <p>HEAD  config  info  packed-refs</p>
-<p>####cat 文件名字：<br>查看文件内容</p>
+<h4 id="cat-文件名字："><a href="#cat-文件名字：" class="headerlink" title="cat 文件名字："></a>cat 文件名字：</h4><p>查看文件内容</p>
 <p>COMMIT_EDITMSG中是本地最后一次commit的msg内容（推或者没推到远程）</p>
 <p>ORIG_HEAD 远程master所在版本</p>
 <p>FETCH_HEAD 本地fetch到的版本和分支</p>
