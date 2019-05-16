@@ -71,20 +71,31 @@
     
     
     <h2 class="post-title">
-        mysql使用总结
+        git的使用总结
     </h2>
     <ul class="post-date">
         <li>
-            2019-05-14
+            2019-05-16
         </li>
         <li>
             权静
         </li>
     </ul>
     <div class="post-content">
-        <p>###sql <a href="http://wiki.jikexueyuan.com/project/mysql-21-minutes/" target="_blank" rel="noopener">极客学院简易教程</a></p>
-<p>####sql bench: 数据库图形化操作平台</p>
-<h5 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h5><p>登录sql：登录远程主机名/当前主机127.0.0.1可以省略-h<br>mysql -u root -p 登录MySQL数据库，输入密码<br>create database quanjing; 新增数据库quanjing【增】<br>drop database quanjing; 删除数据库quanjing【删】<br>show databases; 查看所有数据库，以分号结束命令【查】<br>use quanjing; change 到qunajing数据库<br>show tables; 查看quanjng数据库下所有表名（如skills）<br>create table skills (id int unsigned not null auto_increment primary key, skill_name char(8) not null, level tinyint unsigned not null default 2); 创建表skills，头信息和修饰语<br>select * from skills；查看skills表下所有信息【查】<br>select level, skill_name form skills; 查看skills表下level和skill_name列的信息<br>insert into skills (id, skill_name, level) values (), (), (); 向表skills插入行信息【增】<br>delete from skills where id=1;删除表信息【删】<br>drop table skills;删除表skills【删】<br>quit\exit退出sql</p>
+        <p>###git运用：</p>
+<p>####git stash:<br>本地作了修改，但是想回到修改之前的操作，又不想毁掉现在的修改，可以先储藏一下git stash ,恢复储藏的内容用git stash apply (可以添加指定恢复到哪一个储藏版本)<br>git pull 之后再 git push</p>
+<p>####git reset</p>
+<ol>
+<li>–soft 版本号：修改还存在，处于版本号状态，修改未提交</li>
+<li>–mixed 版本号：修改还存在，处于版本号状态，修改未被跟踪，爆红状态</li>
+<li>–hard 版本号：修改丢失，处于版本号状态<br>####ls<br>本地仓库.git文件夹下，ls查看文件夹下目录：<br>COMMIT_EDITMSG ORIG_HEAD hooks  logs  refs</li>
+</ol>
+<p>FETCH_HEAD branches index  objects</p>
+<p>HEAD  config  info  packed-refs</p>
+<p>####cat 文件名字：<br>查看文件内容</p>
+<p>COMMIT_EDITMSG中是本地最后一次commit的msg内容（推或者没推到远程）</p>
+<p>ORIG_HEAD 远程master所在版本</p>
+<p>FETCH_HEAD 本地fetch到的版本和分支</p>
 
     </div>
 </article>
