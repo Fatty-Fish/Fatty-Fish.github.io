@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        vue组件的使用总结
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-14
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <ol>
+<li>自定义组件使用v-model模拟input实现双向绑定</li>
+<li><p>组件上v-model是v-bind和v-on的语法糖，默认绑定value值和input事件。自定义时可以利用model选项更改：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;</span><br><span class="line">  val: <span class="built_in">String</span></span><br><span class="line">&#125;,</span><br><span class="line">model: &#123;</span><br><span class="line">  prop: <span class="string">"val"</span>, <span class="comment">//更改为绑定val</span></span><br><span class="line">  event: <span class="string">"input"</span></span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  changeVal() &#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="keyword">this</span>.$emit(<span class="string">"input"</span>, newVal)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果是子组件又想通过input更改，可以将val转化为自己的data，用watch监听，一旦更改，就emit</p>
+</li>
+<li><p>keep-alive缓存组件状态<br>创意编辑涉及三个步骤，考虑到可能会返回上一步，需要缓存ID未变更情况下，小组件的状态，提升用户体验。但是问题当ID变化，小组件setOptions内容未更新，还是上次缓存的内容。解决是在路由变化到setOptions，组件激活前hook：activated时，根据ID刷新内容。</p>
+</li>
+<li><p>加载过渡<br>vue自身有一个this.Loading.start()和this.Loading.end()<br>iview有一个注入到vue原型上的：this.Spin.show()和this.Spin.hide()</p>
+</li>
+<li>url-regex对象可以测试URL是否合格urlRegex().test(url)</li>
+<li>父组件想要获取子组件里的函数：this.$refs.子组件的ref值 === 子组件本身this</li>
+<li>computed里创建的值会放到this.$data下面</li>
+<li>事件想要传入事件对象：@click=”cutMove($event)”，想要传入值：@click=”cutMove(index)”</li>
+<li>创建vue组件时，data必须是函数，保证每个组件（vue实例）都有自己独一的data</li>
+<li>数组用includes代替以前indexOf判断是否存在。includes(ele)返回Boolean，indexOf(ele)返回index，没有返回-1，但是坑在-1判断为true: Boolean(-1) === true;</li>
+<li>左右两个button，想按顺序排列在右下角，在结构上写成右左，父级display:flex,flex-direction:row-reverse;</li>
+</ol>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

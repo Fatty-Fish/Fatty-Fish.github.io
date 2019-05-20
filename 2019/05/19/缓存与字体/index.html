@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        缓存与字体
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-19
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <h4 id="字体变量："><a href="#字体变量：" class="headerlink" title="字体变量："></a>字体变量：</h4><p>@font-face{font-family:”font-name”,src:url()}：<a href="https://www.zhangxinxu.com/wordpress/2017/03/css3-font-face-src-local/" target="_blank" rel="noopener">张鑫旭空间</a></p>
+<h5 id="为啥要有字体变量？"><a href="#为啥要有字体变量？" class="headerlink" title="为啥要有字体变量？"></a>为啥要有字体变量？</h5><ol>
+<li>统一替换字体，@font-face{font-family:”yh”, src: local(“st”)},则以后用雅黑都会实际用的宋体</li>
+<li>简化一大堆字体名称，兼容情况下，body的font-family可能是一堆字体名称，为了简单些，可以@font-face{font-family: “basic”, src: local(“arial”),local(“yh”), local(“sy”)}</li>
+<li>字体图标icon<h4 id="h5缓存"><a href="#h5缓存" class="headerlink" title="h5缓存"></a>h5缓存</h4><a href="https://jerryzou.com/posts/cookie-and-web-storage/" target="_blank" rel="noopener">参考别人总结blog</a><br>字体加载完成后记录到localStorage，setItem\getItem。</li>
+<li>local storage: 不跨域下可以互相访问，自己清除</li>
+<li>session storage: 以上标签页下生存</li>
+<li>cookie: http状态记录，服务器提供，浏览器保存到本地，没有httponly标识，js可以访问。domain，path定义作用域。<h4 id="http缓存"><a href="#http缓存" class="headerlink" title="http缓存"></a>http缓存</h4></li>
+<li>强缓存：<br>expires、catch-control</li>
+<li>协商缓存：<br>last modified/if-modified-since、e-tag/if-none-match<h4 id="native-app"><a href="#native-app" class="headerlink" title="native app:"></a>native app:</h4>使用Java c++ 等写出的原生应用，可调用设备通话，摄像头等，基于操作系统 运行</li>
+</ol>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

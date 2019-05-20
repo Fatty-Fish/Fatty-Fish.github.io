@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        图片方格背景
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-17
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <h5 id="图片花纹背景："><a href="#图片花纹背景：" class="headerlink" title="图片花纹背景："></a>图片花纹背景：</h5><p>linear-gradient()<br>param1：渐变角度，deg，to bottom等描述<br>param2：颜色 + 百分比、像素值等，渐变第一个颜色和颜色渐变范围<br>param3：渐变后面的颜色和范围</p>
+<h5 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-color</span>: <span class="selector-id">#ccc</span>;</span><br><span class="line"><span class="selector-tag">background-size</span>: 16<span class="selector-tag">px</span> 16<span class="selector-tag">px</span>;</span><br><span class="line"><span class="selector-tag">background-image</span>:</span><br><span class="line">  <span class="selector-tag">linear-gradient</span>(45<span class="selector-tag">deg</span>,<span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.5</span>) 25%,<span class="selector-tag">transparent</span> 0,<span class="selector-tag">transparent</span> 75%,<span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.5</span>) 0),</span><br><span class="line">  <span class="selector-tag">linear-gradient</span>(45<span class="selector-tag">deg</span>,<span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.5</span>) 25%,<span class="selector-tag">transparent</span> 0,<span class="selector-tag">transparent</span> 75%,<span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.5</span>) 0);</span><br><span class="line"><span class="selector-tag">background-position</span>: 0 0,8<span class="selector-tag">px</span> 8<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="css文本属性利用"><a href="#css文本属性利用" class="headerlink" title="css文本属性利用"></a>css文本属性利用</h5><p>图片标签特别多，右边空间浪费，利用float不会和文本重合，让尺寸float：right，并且通过margin留出区别空间，标签文字排布时会自然在margin以外包围尺寸。</p>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

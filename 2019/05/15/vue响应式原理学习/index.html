@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        vue响应式原理学习
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-15
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <h4 id="watch"><a href="#watch" class="headerlink" title="watch:"></a>watch:</h4><p><a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank" rel="noopener">深入响应式原理：</a><br>每个vue实例初始化渲染时，都有对应的watcher，data里的属性会经过Object.defineProperty，全部转化为getter、setter，并记录为watcher的依赖，当依赖的setter被触发时，watcher触发re-render。但是有两个问题：<br>watcher对属性的收集只发生在初始化渲染，所以动态生成的data不能被监听。可以使用this.$set({},”key”, “value”)。<br>watcher对data属性的转化，只在第一层，如果data某个属性是引用值，对其新添了新的属性，视图并不会更新，<br>可以用Object.assign({}, oldObj, newKeyObj)浅拷贝新的引用，赋值给data替换以前的引用。</p>
+<h4 id="handler："><a href="#handler：" class="headerlink" title="handler："></a>handler：</h4><p><a href="https://juejin.im/post/5ae91fa76fb9a07aa7677543" target="_blank" rel="noopener">watch高级用法</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  obj: &#123;</span><br><span class="line">    handler(newval) &#123;</span><br><span class="line">      <span class="keyword">this</span>.obj = newval</span><br><span class="line">    &#125;,</span><br><span class="line">    deep: <span class="literal">true</span>,</span><br><span class="line">    immediate: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>deep为true可以让watch遍历Object下面所有属性，收集为依赖，转化为getter、setter。immediate为true，可以让初始化渲染就执行handler。开销很大。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  <span class="string">"obj.a"</span>: &#123;</span><br><span class="line">    handler (newval) &#123;<span class="keyword">this</span>.obj.a=newval&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>用字符串的形式，让watcher只收集obj.a</p>
+<h4 id="其他总结"><a href="#其他总结" class="headerlink" title="其他总结"></a>其他总结</h4><ol>
+<li><p>用箭头函数，普通函数会this指向调用他的对象，箭头是往外层找，就是定义时所在的对象</p>
+</li>
+<li><p><style scoped></style>是当前组件的作用域。没写是全局的作用域。可以混用。编译后，通过postcss转换。所以有一个动画帧，想要实现动画，失败，因为名字定义在编译时转化了，不能找到。父组件样式会影响子组件的根元素样式。v-html动态生成的元素不会受scoped样式的影响，根会影响，但根下面的不会影响。</p>
+</li>
+<li>异步请求可以使用async和await，更方便，错误失败情况优先考虑</li>
+</ol>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

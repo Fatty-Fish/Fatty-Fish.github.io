@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        学习博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            学习博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        css小细节、动画和vue使用总结
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-16
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <h4 id="统一简化样式"><a href="#统一简化样式" class="headerlink" title="统一简化样式"></a>统一简化样式</h4><p>规定在app.vue里，输入框包含前缀样式，根据需要对元素加入类名。</p>
+<h4 id="HTML结构通过功能分区"><a href="#HTML结构通过功能分区" class="headerlink" title="HTML结构通过功能分区"></a>HTML结构通过功能分区</h4><h4 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h4><p>是lhs规则，不能v-model=”val || 0”</p>
+<h4 id="子组件props"><a href="#子组件props" class="headerlink" title="子组件props"></a>子组件props</h4><p>子组件props可以规定，什么类型，是否必须要，validator验证是否符合某种规则，default默认值。</p>
+<p>####图片拖拽：<br>记录要动未动时的目标位置，鼠标位置，定义动画函数为箭头函数（方便获取this），记录下一帧的鼠标位置，与最初的鼠标位置差，新的目标位置=要动未动时目标位置 + 差*比例，用到requestAnimationFrame全局函数，浏览器每隔一秒会刷新图像60次，16.7ms会刷新一次，而视觉上，我们看到是静止的或者突变的画面。动画就是要让变化显示出来的视觉效果。animate函数定义图片属性在一定条件范围下怎样变动，requestAnimationFrame递归执行animate</p>
+<h4 id="图片尺寸调整："><a href="#图片尺寸调整：" class="headerlink" title="图片尺寸调整："></a>图片尺寸调整：</h4><p>分为上下左右四边和一个角可以拉伸，在结构和样式上：每个canvas都是绝对定位，宽高绑定图片宽高，拉伸的框宽高绑定图片宽高，包含四个拉伸的点通过绝对定位，和一个角拉伸的点，通过定位和动态绑定样式，图片单独一个绝对定位img标签，宽高100%</p>
+<h4 id="动画："><a href="#动画：" class="headerlink" title="动画："></a>动画：</h4><p>屏幕分为CRT屏和LCD屏，CRT屏幕上图像是电子束击打荧光粉发光显示的，会有闪烁现象。LCD液晶显示屏，是一直发光的，系统每隔大概16.7ms刷新图像；</p>
+<h5 id="requestAnimationFrame："><a href="#requestAnimationFrame：" class="headerlink" title="requestAnimationFrame："></a>requestAnimationFrame：</h5><p>用<a href="http://web.jobbole.com/91578/" target="_blank" rel="noopener">requestAnimationFrameAPI</a>，会跟随系统刷新显示，不会出现跳帧，卡顿情况，</p>
+<h5 id="定时器："><a href="#定时器：" class="headerlink" title="定时器："></a>定时器：</h5><p>setTimeout也可以，但是setTimeout执行时间是不确定的，animate会被放在任务队列中，等待主线程空闲了，再执行。setTimeout只能规定时间，但各种系统刷新图像的时间是不确定的，有可能执行了animate但是并没有刷新图像。</p>
+<h5 id="使用requestAnimationFrame而不用定时器原因："><a href="#使用requestAnimationFrame而不用定时器原因：" class="headerlink" title="使用requestAnimationFrame而不用定时器原因："></a>使用requestAnimationFrame而不用定时器原因：</h5><ol>
+<li>根据系统刷新时间执行animate，不会跳帧，漏帧</li>
+<li>setTimeout会在动画页面尺寸调整或者跳转其他页面时，任然执行动画，动画任务被堆积，当页面跳回来时，会急速闪过所有堆积的animate，没有意义，消耗资源。</li>
+<li>setTimeout的动画如果快过系统刷新图像，会漏帧。<h5 id="vue使用相关："><a href="#vue使用相关：" class="headerlink" title="vue使用相关："></a>vue使用相关：</h5></li>
+<li>computed里可以创造data里的属性，并设置get和set，每次读写直接触发emit，改变父组件。</li>
+<li>有时候时间不起作用，可能是冒泡的事。@click.stop.prevent事件修饰符。</li>
+<li>用v-show代替v-if给频繁替换的元素。v-if值为false不会挂载到dom树，页面中没有这个元素。v-show是仅仅元素css设置为display:none，元素挂载到dom树，只是render树因为css树上属性所以不挂载。<a href="https://segmentfault.com/a/1190000017476386" target="_blank" rel="noopener">参考segmentfault</a> 文档解析原理</li>
+<li>文字多余打点，css实现和js实现</li>
+<li>模拟编辑器的比例问题：<br>目标的位置，由margin-top、margin-left显示，值 =（（目标的x、y坐标值）/ 整个layer图层的宽）<em> 一个定值45；统一比例 = 整个layer图层的宽 / 整个视口的宽 </em> 45%；实际animate更改目标属性x、y坐标，值 = 原来的坐标位置 + 鼠标移动的距离差值 <em> 统一比例；目标的宽高 =（目标的宽高 / 整个layer图层的宽）</em> 一个定值，实际animate更改宽高属性，值 = 原来的宽高值 + 鼠标移动的距离差值 * 统一比例<br>45%对应canvas的宽是45vw；</li>
+<li>模板列表排布动态样式：hover时，缓慢突出，并加阴影：布局的基础上，包含框position：relative站位，bottom：0，transition：all 时间；hover包含框时，bottom：10px；增加shadow。<h5 id="vue组件名字的作用："><a href="#vue组件名字的作用：" class="headerlink" title="vue组件名字的作用："></a>vue组件名字的作用：</h5></li>
+<li>自己调用自已可以用名字</li>
+<li>keep-alive里，切换路由router-view，缓存了状态，需要更新又得不到更新，可以用exclude属性，值为过滤的组件名字。</li>
+<li>vue的dev-tools里，组件名字显示结构</li>
+</ol>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>
