@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        总结
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            总结
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        linux学习
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-07-11
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <p>免费，开源，生态环境繁荣，常用发行版：Ubuntu，Centos。man，info查询命令<br>文件管理<br>ls    显示当前目录下的文件夹和文件，文件夹蓝色，可执行文件绿色，普通文件白色 ls conf/ 指定目录 ls -a 显示所有文件包括隐藏文件 ls -l 显示文件信息：权限、所有人、文件文件夹大小（字节, -lh显示单位）、文件最后修改时间 man ls<br>cd    目录间切换 cd - 回到上一次的目录，cd之前的目录 cd . 当前目录 cd 不加参数进入home目录<br>pwd    显示当前目录<br>目录    / 根目录 ~ home目录<br>cp    复制 cp 源文件 目的文件 cp -r 源文件夹 目标文件夹（递归复制）<br>mv    重命名、移动文件夹或文件 mv 源文件 目的文件<br>rm    删除文件 rm 待删除文件 rm -r 待删除文件夹 -f 避免删除不存在文件报错 -v 显示删除了哪些文件、文件夹<br>ln    链接：指向文件的标识 硬链接：指向同一个文件，删除一个链接，不会删除真正的文件，只能文件建立硬链接（cp） 软链接：记录文件路径 ln 源文件 目标文件（-s软链接） ln -f 源文件 目标文件，覆盖掉已经存在的目标文件<br>磁盘使用空间    du：统计文件所占大小，使用情况 df：剩余量 -sh 仅下一级占用情况<br>find    文件查找 find 路径 -name “*.sh” man find<br>whereis<br>which<br>权限管理<br>root用户: gid = 0; uid = 0;所有权限<br>r读权限4，w写权限（增删改查）2，x执行权限（进去目录 ）1，-没有权限，d（目录）文件所有者-属于group的用户-所有用户<br>chown/chgrp/chmod：改变文件所有者，所属group，改权限：chmod 777 a.txt（-R文件夹递归）<br>su 切换的目标用户id，不加默认切换到root用户<br>sudo -u 目标用户 操作：以某个用户执行，默认不加为root<br>文本操作<br>cat 文件名:查看文件<br>head 文件名：查看文件钱10行 -n指定前几行<br>tail 后<br>tail -f 实时<br>more/less：less看文件第一屏，快捷键，关键字匹配，<br>grep 关键词 文件名(可以是正则表达式)<br>sort 排序文件，默认字符序排列，-r倒序，-k指定某列，-n按数字排序<br>uniq 去重，相同行输出一次，-c输出相同行出现次数<br>wc文件中行数-l，字节数-c，单词数<br>awk<br>sed<br>vim编辑器：/关键字：匹配，模式切换：命令模式，编辑模式；<br>打包、压缩<br>tar打包命令：集合不同文件（新版可以压缩）可保存文件信息<br>gzip压缩命令：单独文件压缩<br>tar -zcvf bakup.tgz 文件、文件夹<br>tar -xzf bakup.tgz<br>zip、unzip<br>zcat解压并查看<br>linux 网络与系统命令<br>curl<br>模拟http请求</p>
+<p>-X method</p>
+<p>-H header</p>
+<p>-d post的data</p>
+<p>-b 指定cookie</p>
+<p>-c 输出响应的 set-cookie带文件</p>
+<p>-i 和 -w 控制response在控制台显示</p>
+<p>wget    下载文件： wget 地址</p>
+<p>进程与系统<br>ps    显示进程和线程信息<br>free    查看内存使用情况，设置单位：-m/-k/-g，-h自动选定单位<br>top    动态交互式显示当前CPU，内存，进程： load average: 1.99, 1.71, 1.19：CPU在一定时间内，需要处理的任务数、线程数，分别是1min5min15min如果等待数超过核数，会缓慢<br>kill<br>发送指定信号指定进程：kill -9 pid 强制终止杀死进程；kill -l 查看信号，9：sigkill</p>
+<p>Ctrl+c == kill -2</p>
+<p>网络常用工具命令<br>ping    检测网络连接可达性：packet internet grouper网络发包工具，基于icmp协议，网络层协议，没有端口概念；-c n pingn次，-W n n秒超时，-q静默输出，只输出结果<br>host<br>dns解析</p>
+<p>hostname 本地主机名：ThinkPad-E490-PF1PJKPE</p>
+<p>ifconfig 各个虚拟网卡的IP地址</p>
+<p>host ip 获取对应主机名</p>
+<p>host 主机名 获取对应IP</p>
+<p>nc    网络发包，发送tcp（-t）/udp（-u）数据包，-l监听服务某个端口<br>netstat<br>查看端口信息： -a获取所有socket端口信息， -n以IP 形式显示</p>
+<p>协议，缓冲队列大小，本地IP、端口，远端IP、端口，连接状态</p>
+<p>tcpdump    抓包工具<br>telnet    远程登录、tcp连接测试</p>
+<p>远程命令<br>ssh<br>安全远程登录：secure shell客户端，</p>
+<p>如跳板机登录</p>
+<p>scp<br>远程拷贝</p>
+<p>本机文件，远程文件互相拷贝</p>
+<p>跳板机文件拷贝到本地：</p>
+<p>scp 远程:文件路径 本地路径</p>
+<p>shell脚本编程<br>Linux自带命令完成工作：</p>
+<p>&amp;#35!/bin/sh指定脚本解析器，分号、换行符分割</p>
+<p>shell数组，只支持一维数组，大小不限，下标允许不连续<br>定义数组：arrayName=(val0 val1 val2)<br>读取数组：val1=${arrayName[1]}<br>获取数组中的所有元素：@、<em>：echo ${arrayName[</em>]}<br>shell脚本中数组脚标只能是数值，awk可以是字符串<br>获取数组长度：echo ${&amp;#35arrayName[<em>]}，echo ${&amp;#35arrayName[1]}（获取数组某个元素长度）<br>shell传递参数，<br>$n: 0为执行的文件名，1为执行脚本第一个参数，，，<br>$&amp;#35传递到脚本的参数个数<br>$</em> 所有参数一串字符串输出<br>$@每个参数分别加引号输出<br>shell运算符<br>算数运算符<br>关系运算符：只能对数字，-eq， -ne（不等于）, -gt, -lt, -ge(大于或等于), -le<br>布尔运算符: -o（or  ||）, -a（and  &amp;&amp;）<br>字符串运算符: -z, -n, str<br>文件测试运算符: -e是否存在,-d是目录, -w是否可写,,,,,,<br>shell流程控制<br>if: if then elif then else fi<br>for: for prop in 12345 do 操作 done<br>while<br>untill<br>case (esac)<br>break (continue)<br>shell函数<br>自定义函数<br>[function] funcName [()] {action;[ return int;]}执行结果$?接受，需要在别的函数占用$?前输出<br>xargs:避免参数列表过长，xargs多行合成一行，xargs -n2 两列一组输出，删除文件夹：<br>alias：设置命令别名：unalias取消别名<br>crontab：定时执行<br>rsync：文件同步，只传输变化数据<br>iostat：提供线上机器io状态数据（tps，吞吐量，设备使用率&lt;80%，响应时间&lt;5ms, idle空闲高不高）<br>vmstat：查看虚拟内存（vm）使用状况：r 当前运行的队列数（是否超过CPU核数）bo长期不为零，需要加大内存，id（idle）常小于40，机器负载高<br>atnodes 在集群上运行指定命令，<br>tonodes 上传本地文件到集群，</p>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a><span class="tag-list-count">1</span></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

@@ -71,26 +71,47 @@
     
     
     <h2 class="post-title">
-        bom浏览器对象模型
+        git学习
     </h2>
     <ul class="post-date">
         <li>
-            2019-05-20
+            2019-07-11
         </li>
         <li>
             权静
         </li>
     </ul>
     <div class="post-content">
-        <h4 id="浏览器对象模型"><a href="#浏览器对象模型" class="headerlink" title="浏览器对象模型"></a><a href="https://juejin.im/entry/5aabcfc7f265da239f07228f" target="_blank" rel="noopener">浏览器对象模型</a></h4><ol>
-<li>BOM<br>BOM下面包含一个window对象，是BOM的顶层对象；</li>
-<li>window下有四个对象和一些方法，比如window.open()新开一个窗口；</li>
-<li>window.navigator<br>用户代理信息相关</li>
-<li>window.history<br>窗口前进后退的历史记录；</li>
-<li>window.screen<br>窗口屏幕信息相关</li>
-<li>window.location<br>窗口的url位置相关</li>
-<li>window下的四个对象都包含相关属性和操作相关属性的方法</li>
-</ol>
+        <p>svn vs git<br>svn:集中式版本控制系统：文件内容、版本信息，修改信息放在中央服务器上，拷贝的是某一特定版本，存储文件的变化。递增编号作为版本号<br>git:分布式版本控制系统：拷贝整个服务器代码，所有版本。交互在本地仓库完成，需要共享代码才推送到远程。最初Linux源代码的维护，分支开发。根据文件内容，生成hash值作为版本号<br>git状态<br>已修改状态，工作区，修改，但并未打算提交<br>已暂存状态，暂存区，未提交，放到下次要提交的快照中<br>已提交状态，远程区，已经在本地仓库中，可以在分支中查看<br>git status 查看工作区中文件状态<br>git diff 查看分支间区别<br>git merge 、解决冲突、git push 推送最新代码<br>http：每次会让重新输入用户名、密码<br>ssh：需要本机的ssh公钥添加到远程<br>.gitignore：忽略一些文件，当文件没有被跟踪，不会提示：logs/、a.md<br>.git: 本地仓库，保存git对象、logs等<br>git 常用命令：<br>git clone    克隆<br>git init    创建空的本地仓库、重新初始化存在仓库<br>git remote<br>管理相关远程仓库，origin；-v 查看详细信息，rename、remove：：</p>
+<p>git remote rename origin o</p>
+<p>git remote remove o</p>
+<p>git log    记录提交，本地远程同步保存<br>git status    工作区域状态<br>git reflog    所有分支所有操作，包括clone，checkout，存在于本地仓库<br>git reset HEAD file.txt    将文件从暂存区撤回到工作区(撤销git add)<br>git config<br>修改git配置信息：作者邮箱，作者</p>
+<p>git config –add user.name lily</p>
+<p>git config</p>
+<p>git diff<br>默认显示工作区与暂存区中文件差异</p>
+<p>git diff –cached(–staged)（暂存区与最新本地仓库差异）</p>
+<p>git diff 版本号1 版本号2</p>
+<p>git diff master jing.quan</p>
+<p>git add    推到暂存区<br>git commit    暂存区到本地仓库<br>git push<br>本地仓库到远程仓库：本地建立jing.quan分支，没有对应上游分支</p>
+<p>git push –set-upstream origin jing.quan(-u)</p>
+<p>git merge    合并分支（合并本地工作区的branch和本地的origin/branch）（checkout master, 合并branch到本地master）<br>git fetch    拉取远程到本地（拉取远程的branch到本地的origin/branch）<br>git pull    拉取远程到本地，再合并分支<br>git branch<br>管理分支</p>
+<p>新建：git branch jing.quan （-b）</p>
+<p>删除：git branch -d jing.quan</p>
+<p>查看分支详细信息： git branch -v</p>
+<p>git checkout<br>切换分支、撤销文件:</p>
+<p>git checkout -b jing.quan（新建、切换）</p>
+<p>git checkout –jing.quan.txt（工作区还原成暂存区，放弃自己的更改）</p>
+<p>git checkout 版本号 文件名（还原到某一版本中的某一个文件）</p>
+<p>git checkout HEAD(当前)～n(没有n：上一次的提交，n代表上几次) 文件名（同上）</p>
+<p>git reset<br>重置HEAD到指定的状态(当前分支)</p>
+<p>–mixed（默认）撤出缓存区的变更，变回原来本地仓库的版本</p>
+<p>–hard 覆盖暂存和工作区</p>
+<p>–soft 改变HEAD指针，改变工作区</p>
+<p>git revert<br>回滚（撤销commit）操作将被当做一次提交</p>
+<p>git revert 版本号（同git reset –hard 版本号，区别在reset会抹除目标版本号以后的提交）</p>
+<p>git cherry-pick<br>某次提交内容合并到当前分支（git branch）</p>
+<p>git cherry-pick 某次提交版本号</p>
+<p>git merge 冲突解决：<br>继续合并：先git pull，拉取最新的，再解决冲突，再add、commit、push<br>取消合并：git merge –abort<br>合并时，一个分支的所有commit都变成一个commit，放到当前分支的前面<br>git rebase:一个分支的修改合并到当前分支，一个分支的所有commit都连接到当前分支的前面</p>
 
     </div>
 </article>

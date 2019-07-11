@@ -71,26 +71,18 @@
     
     
     <h2 class="post-title">
-        bom浏览器对象模型
+        http+ajax+json学习
     </h2>
     <ul class="post-date">
         <li>
-            2019-05-20
+            2019-07-11
         </li>
         <li>
             权静
         </li>
     </ul>
     <div class="post-content">
-        <h4 id="浏览器对象模型"><a href="#浏览器对象模型" class="headerlink" title="浏览器对象模型"></a><a href="https://juejin.im/entry/5aabcfc7f265da239f07228f" target="_blank" rel="noopener">浏览器对象模型</a></h4><ol>
-<li>BOM<br>BOM下面包含一个window对象，是BOM的顶层对象；</li>
-<li>window下有四个对象和一些方法，比如window.open()新开一个窗口；</li>
-<li>window.navigator<br>用户代理信息相关</li>
-<li>window.history<br>窗口前进后退的历史记录；</li>
-<li>window.screen<br>窗口屏幕信息相关</li>
-<li>window.location<br>窗口的url位置相关</li>
-<li>window下的四个对象都包含相关属性和操作相关属性的方法</li>
-</ol>
+        <p>http<br>在tcp/ip协议上层<br>请求头：<br>Host: 初始URL中的主机和端口<br>Accept：浏览器可以接受的MIME类型<br>Accept-Charset：浏览器可以接受的字符集<br>Accept-Encoding：浏览器能够解码的数据编码方式：gzip<br>Accept-Language：浏览器所希望的语言<br>Connection：是否需要持久连接（）<br>Content-Length：请求消息正文的长度<br>Cookie：保持回话状态<br>Referer：包含一个URL<br>User-Agent：浏览器类型<br>响应头：<br>Access-Control-Allow-Origin：指定站点可以参与跨站资源共享<br>Content-Length：<br>Content-Type：响应体的MIME类型js/css/jpg做操作<br>Date: 服务器时间<br>Server：服务器名称<br>Set-Cookie：浏览器据此更新cookie<br>Transfer-Encoding：设置传输实体的编码格式，chunked，compress，gzip，identity，浏览器根据格式，解压处理响应<br>http Method<br>资源期望的动作<br>get：不操作，只读取数据<br>head：与get请求一样的响应，只要响应头，没有响应体<br>post：用于将实体提交到指定资源，改变服务器状态、数据<br>put：创建、更新指定资源，<br>delete：删除指定资源<br>区分：<br>安全性：资源不发生改变<br>幂等性：请求多次，结果相同<br>get：安全，幂等，浏览器一般要缓存get的资源<br>head：同get<br>post：不安全不幂等，会更改服务器资源，每次post修改<br>put：不安全，幂等，<br>delete：不安全，幂等<br>状态码：<br>1xx：消息<br>2xx：成功<br>3xx：重定向<br>301：永久，浏览器会缓存，之后每次都会新地址<br>302：临时重定向，浏览器不会 缓存<br>304：资源没有改变，浏览器取缓存<br>4xx：客户端错误<br>403：禁止访问<br>5xx：服务器挂<br>500：服务器内部bug<br>503：服务器临时挂<br>content-type：<br>请求和响应的http内容类型<br>格式：type/subtype：text/html、text/css、text/javascript、告诉后端请求体用什么格式编码：application/x-www-form-urlencoded、multipart/form-data、application/json<br>application/x-www-form-urlencoded：<br>form标签默认编码方式：a=b&amp;c=b&amp;d=w<br>难表示复杂类型（数组）<br>multipart/form-data：<br>可传数据多，主要传文件<br>application/json：<br>ajax提交json格式，$ajax</p>
 
     </div>
 </article>
