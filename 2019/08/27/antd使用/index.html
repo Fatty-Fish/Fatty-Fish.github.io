@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        总结
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: rgba(10, 10, 10, 0.6)">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            总结
+        </a>
+    </h1>
+    <h2 class="desc">
+        前端学习
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/Fatty-Fish">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        antd使用
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-08-27
+        </li>
+        <li>
+            权静
+        </li>
+    </ul>
+    <div class="post-content">
+        <h2 id="下拉框不滚动问题"><a href="#下拉框不滚动问题" class="headerlink" title="下拉框不滚动问题"></a>下拉框不滚动问题</h2><p>原因：下拉框是默认基于body定位的，所以当有下拉框的组件位于另一个有滚动条的弹出层，比如modal框时，由于body并没有滚动，下拉框不会随着modal的滚动而滚动，会挡住modal的滚动信息。<br>解决办法：<br>更改下拉框的默认定位元素。有一个API是getPopupContainer，可以在modal的第一层，包裹一个div，设置id为dropDownWrapper，再为每一个有下拉框的元素设置<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getPopupContainer=&#123;() =&gt; <span class="built_in">document</span>.getElementById(<span class="string">'dropDownWrapper'</span>)&#125;</span><br></pre></td></tr></table></figure></p>
+<p>日历的弹框是getCalendarContainer</p>
+<h2 id="form表单的使用注意"><a href="#form表单的使用注意" class="headerlink" title="form表单的使用注意"></a>form表单的使用注意</h2><ol>
+<li><p>需要render前获取装饰器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;getFieldDecorator&#125; = <span class="keyword">this</span>.props.form;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用时需要装饰器，有rules，里面可以有validator，使用正则校验，并返回有status状态的函数，函数需要callback，正确匹配也应当执行callback，select的initialValue是undefined才会是置空状态。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;Form.Item label=<span class="string">"姓名"</span>&gt;</span><br><span class="line">    &#123;getFieldDecorator(<span class="string">'userId'</span>, &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">                required: <span class="literal">true</span>,</span><br><span class="line">                message: <span class="string">'姓名必填'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                max: <span class="number">20</span>,</span><br><span class="line">                message: <span class="string">'上限20个字符'</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="comment">// eslint-disable-next-line no-undefined</span></span><br><span class="line">        initialValue: <span class="literal">undefined</span></span><br><span class="line">    &#125;)(</span><br><span class="line">        &lt;AutoComplete</span><br><span class="line">            onSelect=&#123;<span class="keyword">this</span>.onAddName&#125;</span><br><span class="line">            onSearch=&#123;<span class="keyword">this</span>.handleSearchName&#125;</span><br><span class="line">            placeholder=<span class="string">"请输入姓名"</span></span><br><span class="line">            getPopupContainer=&#123;() =&gt; <span class="built_in">document</span>.getElementById(<span class="string">'modalScrollDiv'</span>)&#125;</span><br><span class="line">        &gt;</span><br><span class="line">            &#123;reassignStaffs&#125;</span><br><span class="line">        &lt;<span class="regexp">/AutoComplete&gt;</span></span><br><span class="line"><span class="regexp">    )&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>Form.Item&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后导出需要form包装，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Form.create(&#123;<span class="attr">name</span>: <span class="string">'register'</span>&#125;)(ReassignModal);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意的点，组件被form包装过了，所以表单里select框的值变化也是一种props变化，所以componentwillreceiveprops会被走到。</p>
+</li>
+<li>如果不想要form的一些性质，可以通过state来储存表单的值，使表单变成受控组件。</li>
+</ol>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/antd/">antd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a><span class="tag-list-count">1</span></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>
